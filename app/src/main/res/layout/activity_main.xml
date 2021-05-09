@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:liftOnScroll="true"
+    android:id="@+id/topAppBar">
+
+
+
+
+<com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/title"
+        app:menu="@menu/main_manu"
+        app:navigationIcon="@drawable/ic_menu_navigation"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:backgroundTint="#f59e40"
+
+
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        android:elevation="0dp"
+        />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Scrollable content -->
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
+<androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/recycleView"
+        android:layout_below="@+id/topAppBar"/>
+</RelativeLayout>
